@@ -113,19 +113,15 @@ namespace cinder {
 
         if( ! mFilePath.empty() ) {
 
-            if( mExtension == "jpeg" ) {
-                if ( !tje_encode_to_file(mFilePath.string().c_str(), (int)mWidth, (int)mHeight, mNumComponents, mData.get() ) ) {
-                    throw ImageIoExceptionFailedWrite();
-                }
+            if ( !tje_encode_to_file(mFilePath.string().c_str(), (int)mWidth, (int)mHeight, mNumComponents, mData.get() ) ) {
+                throw ImageIoExceptionFailedWrite();
             }
         }
+        
         else {
             OStream *stream = mDataTarget->getStream().get();
-            if( mExtension == "jpeg" ) {
-                if(! tje_encode_with_func( tinyJpegWriteToStream, stream, 1, (int)mWidth, (int)mHeight, mNumComponents, mData.get() ) ){
-                    throw ImageIoExceptionFailedWrite();
-                }
-
+            if(! tje_encode_with_func( tinyJpegWriteToStream, stream, 1, (int)mWidth, (int)mHeight, mNumComponents, mData.get() ) ){
+                throw ImageIoExceptionFailedWrite();
             }
         }
     }
