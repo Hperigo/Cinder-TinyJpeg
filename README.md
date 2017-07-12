@@ -7,3 +7,5 @@ usage:
 Just call this function at setup: 
 
 ``ImageTargetTinyJpeg::registerSelf();``
+
+Currently it only works with color images
