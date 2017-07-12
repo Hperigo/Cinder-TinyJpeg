@@ -1,3 +1,6 @@
 [submodule "TinyJPEG"]
 	path = TinyJPEG
 	url = https://github.com/serge-rgb/TinyJPEG.git
+[submodule "src/TinyJPEG"]
+	path = src/TinyJPEG
+	url = https://github.com/serge-rgb/TinyJPEG.git
