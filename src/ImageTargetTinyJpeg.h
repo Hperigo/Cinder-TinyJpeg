@@ -38,7 +38,7 @@ namespace cinder {
         std::unique_ptr<uint8_t[]>	mData;
         DataTargetRef				mDataTarget;
         
-        float                       quality = 1.0f;
+        int                       quality = 1; // Tiny jpeg quality is 1,2,3. 3 is best
     };
     
 }

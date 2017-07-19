@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Cinder-tinyJpeg"
+	id="tiny.jpeg"
+	author="Henrique Perigo"
+	summary="Jpeg read/write for raspberry pi"
+	license="MIT License"
+	git="https://github.com/Hperigo/Cinder-TinyJpeg"
+	>
+	<includePath>src/tinyJpeg</includePath>
+	<includePath>src</includePath>
+
+	<header>src/ImageTargetTinyJpeg.h</header>
+	<header>src/TinyJPEG/tiny_jpeg.h</header>
+
+	<source>src/ImageTargetTinyJpeg.cpp</source>
+
+</block>
+</cinder>

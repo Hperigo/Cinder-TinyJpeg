@@ -92,7 +92,7 @@ namespace cinder {
             mFilePath = dataTarget->getFilePath();
         }
 
-        quality = options.getQuality();
+        quality = (int) std::floor( options.getQuality() * 3);
 
         mData = std::unique_ptr<uint8_t[]>( new uint8_t[mHeight * mRowBytes] );
     }
